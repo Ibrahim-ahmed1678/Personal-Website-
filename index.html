@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Ahmed - Electrical Engineering Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ibrahim Ahmed</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Ibrahim Ahmed</span></h1>
+                <h2 class="hero-subtitle">Electrical Engineering Student at UCLA</h2>
+                <p class="hero-description">
+                    Passionate about embedded systems, machine learning, and neuroengineering. 
+                    Building autonomous systems and exploring the intersection of hardware and AI.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Ibrahim-ahmed1678" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ibrahim-ahmed-16ba27315/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ibrahimibbi77@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="window-title">autonomous_control.py</div>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">import</span> torch
+<span class="keyword">from</span> control <span class="keyword">import</span> PIDController
+
+<span class="keyword">class</span> <span class="class-name">AutonomousSystem</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.controller = PIDController()
+        self.model = self.load_cnn_model()
+    
+    <span class="keyword">def</span> <span class="function">process_sensor_data</span>(self, sensors):
+        error = self.compute_error(sensors)
+        <span class="keyword">return</span> self.controller.update(error)
+    
+    <span class="keyword">def</span> <span class="function">run</span>(self):
+        <span class="keyword">while</span> <span class="constant">True</span>:
+            control_signal = self.process()
+            self.actuate(control_signal)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-preview">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>C++, Python, JavaScript, MATLAB</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Hardware</h3>
+                    <p>LTspice, KiCad, FreeCAD, Breadboarding</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>PyTorch, TensorFlow, Computer Vision, ROS</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Engineering Tools</h3>
+                    <p>MATLAB, LaTeX, Git, CAD Software</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/tumondal/donkey-racer" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>IEEE Donkey Racers</h3>
+                        <p>Autonomous car using ML and computer vision on Raspberry Pi with ROS</p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">ROS</span>
+                            <span class="tag">PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Ibrahim-ahmed1678/EdgeAI-Hackathon-Gesture-Controlled-Drone" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gesture Controlled Drone</h3>
+                        <p>Real-time gesture recognition system using NVIDIA Jetson for drone control</p>
+                        <div class="project-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">NVIDIA Jetson</span>
+                            <span class="tag">Hackathon Winner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Ibrahim-ahmed1678/Newtonian-Two-Body-Problem-Simulation" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Newtonian Physics Simulation</h3>
+                        <p>2D physics engine with adaptive time-stepping for orbital mechanics</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Physics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Ibrahim Ahmed. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Ibrahim-ahmed1678" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/ibrahim-ahmed-16ba27315/" target="_blank">LinkedIn</a>
+                <a href="mailto:ibrahimibbi77@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
